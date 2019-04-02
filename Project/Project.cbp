@@ -63,7 +63,6 @@
 		<Unit filename="StartScreen.cpp" />
 		<Unit filename="StartScreen.h" />
 		<Unit filename="Weapons.cpp" />
-		<Unit filename="Weapons.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<code_completion />

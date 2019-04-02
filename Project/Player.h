@@ -56,7 +56,7 @@ class Bullet
     private:
 
         b2Vec2 bullet_pos;
-        double bullet_dir; //Направление пули
+        double bullet_dir;
         Clock clock;
         float life_time = 0;
         bool life = true;
@@ -94,8 +94,8 @@ class Player
         b2BodyDef bdef;                         //  Box2D
         b2FixtureDef fdef, fdef2;               //
         b2Body *heroHB; // Тело Box2D (Хитбокс)
-        Sprite sprite;  //Спрайт игрока
-        b2Vec2 speed, position;       //Скорость и позиция игрокаыв
+        Sprite sprite;
+        b2Vec2 speed, position;
         int hp = 100, oldHP = 100, Lifes = 3;
         double weapon_timer = 301;
         Weapon weapon;
@@ -134,7 +134,7 @@ class Player
         void setSounds();
         void Control(vector<Bullet>& bullets);
         void Update ();
-        void check_on ();
+        void check_on ();  //Различные проверки
         void Connect (); // Соединение спрайтов с хитбоксами
 };
 #endif // PLAYER_H_INCLUDED
