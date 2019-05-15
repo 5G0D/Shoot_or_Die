@@ -4,6 +4,7 @@
 #include <string.h>
 #include <iostream>
 #include <cmath>
+#include <conio.h>
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 

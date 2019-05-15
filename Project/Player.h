@@ -33,7 +33,6 @@ class Weapon
 
         b2Vec2 gun_position = {40, 0}; //Позиция оружия относительно игрока
         int gunAngle = 0;
-        int damage;
 
     public:
 

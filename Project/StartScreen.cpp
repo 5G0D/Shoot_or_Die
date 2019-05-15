@@ -15,7 +15,7 @@ StartScreen::StartScreen(RenderWindow* window)
     text.setColor(Color::White);
     text.setCharacterSize(30);
     text.setPosition(960, 860);
-    text.setString("Press ENTER to start");
+    text.setString("Press any key to start");
     text.setOrigin(220, 15);
 }
 
@@ -32,13 +32,18 @@ void StartScreen::Play()
                 visibleArea = Area;
                 window->setView(sf::View(visibleArea));
             }
+
             if (event.type == sf::Event::Closed)
                 window->close();
-        }
 
-        if (Keyboard::isKeyPressed(Keyboard::Return))
-        {
-            return;
+            if (event.type == sf::Event::KeyPressed)
+            {
+                if (Keyboard::isKeyPressed(Keyboard::Escape))
+                {
+                    exit(0);
+                }
+                return;
+            }
         }
 
 
@@ -46,12 +51,6 @@ void StartScreen::Play()
         clock.restart();
         time = time/800;
         timer += time;
-
-        if (Keyboard::isKeyPressed(Keyboard::Escape) && timer > 300)
-        {
-            exit(0);
-        }
-
 
         if (textDir)
         {
